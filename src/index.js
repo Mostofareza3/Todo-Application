@@ -4,12 +4,16 @@ import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import App from './App';
+import { store } from './app/store';
 import './styles/GlobalStyles.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

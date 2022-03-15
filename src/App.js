@@ -1,4 +1,5 @@
 import React from 'react';
+import { Toaster } from 'react-hot-toast';
 import AppContent from './components/AppContent';
 import AppHeader from './components/AppHeader';
 import PageTitle from './components/PageTitle';
@@ -12,6 +13,13 @@ function App() {
         <AppHeader />
         <AppContent />
       </div>
+      <Toaster
+        toastOptions={{
+          style: {
+            fontSize: '1.6rem',
+          },
+        }}
+      />
     </div>
   );
 }
