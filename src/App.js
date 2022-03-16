@@ -7,20 +7,23 @@ import styles from './styles/modules/app.module.scss';
 
 function App() {
   return (
-    <div className="container">
-      <PageTitle>TODO LIST</PageTitle>
-      <div className={styles.app__wrapper}>
-        <AppHeader />
-        <AppContent />
+    <>
+      <div className="container">
+        <PageTitle>TODO List</PageTitle>
+        <div className={styles.app__wrapper}>
+          <AppHeader />
+          <AppContent />
+        </div>
       </div>
       <Toaster
+        position="bottom-right"
         toastOptions={{
           style: {
-            fontSize: '1.6rem',
+            fontSize: '1.4rem',
           },
         }}
       />
-    </div>
+    </>
   );
 }
 
